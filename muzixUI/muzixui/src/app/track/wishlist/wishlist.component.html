@@ -1,0 +1,18 @@
+<!-- <p>
+  wishlist works!
+</p>
+<p>{{imageName}}</p>
+<app-card>(trackNameEvent)="recieveTrackname($event)"</app-card> -->
+
+<app-card *ngFor="let tr of tracks"
+  [imageName] = "tr['trackName']"
+  [imageUrl] = "tr['trackId']"
+  [track] = "tr"
+ >
+
+</app-card>
+<mat-card *ngFor="let tr of tracks">
+    <button (click)="updateTrack(tr)"mat-button>update</button>
+</mat-card>
+
+

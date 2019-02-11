@@ -1,0 +1,10 @@
+<p>cardcontainer</p>
+
+
+<app-card *ngFor="let im of images"
+  [imageName] = "im['name']"
+  [imageUrl] = "im['image'][2]['#text']"
+  [track] = 'im'
+  (trackNameEvent) = 'addTrack($event)'
+  >
+</app-card>
